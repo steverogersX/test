@@ -4,6 +4,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 https://test-seven-iota-57.vercel.app
 
+### Demo Credentials
+
+- Email: `konapala.pawan.kumar@gmail.com`
+- Password: `jVPy5fMwkT5rUEB`
+
 ## Getting Started
 
 First, run the development server:
