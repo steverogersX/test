@@ -1,6 +1,8 @@
 import { createClient } from "@nhost/nhost-js"
 
+import { env } from "@/lib/env"
+
 export const nhost = createClient({
-  subdomain: process.env.NEXT_PUBLIC_NHOST_SUBDOMAIN,
-  region: process.env.NEXT_PUBLIC_NHOST_REGION,
+  subdomain: env.nhostSubdomain,
+  region: env.nhostRegion,
 })

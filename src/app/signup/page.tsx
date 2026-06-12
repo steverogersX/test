@@ -65,7 +65,10 @@ export default function SignupPage() {
       const { body } = await nhost.auth.signUpEmailPassword({
         email,
         password,
-        options: { displayName: name },
+        options: {
+          displayName: name,
+          redirectTo: `${window.location.origin}/login`,
+        },
       })
 
       if (body.session) {
