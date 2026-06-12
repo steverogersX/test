@@ -182,7 +182,7 @@ export function LiveTranscript() {
 
         {error && <p className="text-sm text-destructive">{error}</p>}
 
-        <div className="min-h-32 rounded-lg border border-border bg-muted/30 p-3 text-sm leading-relaxed whitespace-pre-wrap">
+        <div className="min-h-32 rounded-xl border border-border bg-muted/40 p-4 text-sm leading-relaxed whitespace-pre-wrap">
           {finalTranscript || interimTranscript ? (
             <p>
               {finalTranscript}{" "}
@@ -204,7 +204,12 @@ export function LiveTranscript() {
 function StatusBadge({ status }: { status: Status }) {
   switch (status) {
     case "listening":
-      return <Badge>Listening</Badge>;
+      return (
+        <Badge className="gap-1.5">
+          <span className="size-1.5 animate-pulse rounded-full bg-primary-foreground" />
+          Listening
+        </Badge>
+      );
     case "connecting":
       return <Badge variant="secondary">Connecting...</Badge>;
     case "error":
